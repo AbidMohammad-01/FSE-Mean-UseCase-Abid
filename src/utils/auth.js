@@ -10,7 +10,9 @@ function verifyToken(req,res,next){
         console.log(dToken)
         next()
     }
-       
+   else{
+    res.status(403).send({message:"UnAuthorized"})
+   }    
    }
    catch(err){
     res.status(403).send({message:err.message})
