@@ -2,13 +2,13 @@
   "name": "movieapp",
   "version": "1.0.0",
   "description": "Movie booking app ",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "npm run start"
+    "start": "node app"
   },
   "author": "Abid Hussain Mohammad",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": { 
     "bcryptjs": "^2.4.3",
     "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
