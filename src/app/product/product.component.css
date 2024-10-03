@@ -1,0 +1,16 @@
+.details{
+    display: flex;
+    gap: 30px;
+   
+    
+}
+
+.p:hover{
+    background-color: coral;
+    
+    
+}
+.m:hover{
+    border: solid 2px coral;
+}
+

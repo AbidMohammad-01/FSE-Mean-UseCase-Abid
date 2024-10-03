@@ -1,0 +1,98 @@
+
+<p class="text-center h1 mt-5 pb-3">Register</p>
+<div class="container">
+   
+    <form class="form-group f"  [formGroup]="user" #ref="ngForm" (ngSubmit)="onSubmitUser()">
+        <div class="mb-2">
+            
+            <input type="text" formControlName="firstname" id="firstname" class="form-control"  placeholder="Firstname">
+            <!-- validation error message for firstname -->
+        <div *ngIf="
+        firstname.invalid &&
+        (firstname.dirty || firstname.touched || ref.submitted )
+      " class="text-danger" >
+            <p *ngIf="firstname?.errors?.['required']">Firstname is required</p>
+           
+          </div>
+            
+        </div>
+    
+        <div class="mb-2">
+            
+          <input type="text" formControlName="lastname" id="lastname" class="form-control"  placeholder="Lastname">
+          <!-- validation error message for lastname -->
+      <div *ngIf="
+      lastname.invalid &&
+      (lastname.dirty || lastname.touched || ref.submitted )
+    " class="text-danger" >
+          <p *ngIf="lastname?.errors?.['required']">Lastname is required</p>
+         
+        </div>
+          
+      </div>
+      
+      <div class="mb-2">
+            
+        <input type="text" formControlName="id" id="id" class="form-control"  placeholder="id">
+        <!-- validation error message for id -->
+    <div *ngIf="
+    id.invalid &&
+    (id.dirty || id.touched || ref.submitted )
+  " class="text-danger" >
+        <p *ngIf="id?.errors?.['required']">Id is required</p>
+       
+      </div>
+        
+    </div>
+
+        <div class="mb-2">
+            
+            <input type="password" formControlName="password" id="password"  placeholder="Password" class="form-control">
+            <!-- validation msg for password -->
+        <div *ngIf="
+        password?.invalid &&
+        (password?.dirty || password?.touched || ref.submitted)
+      " class="text-danger">
+      <p *ngIf="password?.errors?.['required']">Password is required</p>
+  </div>
+        </div>
+
+        <div class="mb-2">
+            
+          <input type="password" formControlName="confirmpassword" id="confirmpassword"  placeholder="Confirm password" class="form-control">
+          <!-- validation msg for confirmpassword -->
+      <div *ngIf="
+      confirmpassword?.invalid &&
+      (confirmpassword?.dirty || confirmpassword?.touched || ref.submitted)
+    " class="text-danger">
+    <p *ngIf="confirmpassword?.errors?.['required']">Confirm password is required</p>
+</div>
+      </div>
+        <div class="mb-2">
+            
+            <input type="email" formControlName="email" id="email" class="form-control"  placeholder="Email">
+            <div *ngIf="
+              email?.invalid &&
+              (email?.dirty || email?.touched || ref.submitted)
+            " class="text-danger">
+            <p *ngIf="email?.errors?.['required']">Email ID is required</p>
+        </div>
+        </div>
+        <div class="mb-2">
+            
+            <input type="phone" formControlName="phone" id="phone" class="form-control"  placeholder="Phone Number">
+            <div *ngIf="
+              phone?.invalid &&
+              (phone?.dirty || phone?.touched || ref.submitted)
+            " class="text-danger">
+            <p *ngIf="phone?.errors?.['required']">Phone Number is required</p>
+        </div>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn px-5 s">Submit</button>
+        </div>
+        <p class="pt-2 pl-2">Already a User? Go to <a routerLink="/login" routerLinkActive="active" class="l">Login</a></p>
+    
+    </form>
+
+</div>  

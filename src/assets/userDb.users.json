@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "65e6ee01881e9ba4e3bd25ec"
+  },
+  "username": "abidhussain",
+  "password": "$2a$05$ssxRatyoJN6NA7VKA0Uase5FLgoCDus/oTs5VBVLttC2/MLzOudCC",
+  "email": "abid.mohammad2001@gmail.com",
+  "phone": {
+    "$numberLong": "8919140830"
+  },
+  "cartItem": [],
+  "__v": 0,
+  "compareMobiles": []
+},
+{
+  "_id": {
+    "$oid": "65f14d0e501ea8bcf70653a7"
+  },
+  "username": "omsai",
+  "password": "$2a$05$JLU43ageEDzf2l2DSnWNbuTkZJvvu94rq.z7nk90BjuTKvx7.KxvG",
+  "email": "omsai@gmail.com",
+  "phone": {
+    "$numberLong": "8919100428"
+  },
+  "cartItem": [],
+  "compareMobiles": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65fa6f9ecc73e8727b86acfc"
+  },
+  "username": "manu",
+  "password": "$2a$05$VcStdafrve4bxnz67X4UHe/C3sZyVXisNhzy0aI4gBN85KlY4trdm",
+  "email": "manu@mail.com",
+  "phone": {
+    "$numberLong": "8989890009"
+  },
+  "cartItem": [
+    {
+      "_id": "65e19bd2edf1ce18de42dd45",
+      "id": "12",
+      "mobile": "REDMI 12 (Pastel Blue, 128 GB)  (6 GB RAM)",
+      "features": "6 GB RAM | 128 GB ROM | Expandable Upto 1 TB 17.25 cm (6.79 inch) Full HD+ Display 50MP + 8MP + 2MP | 8MP Front Camera 5000 mAh Battery Helio G88 Processor",
+      "price": "₹10,499",
+      "img": "https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/e/a/g/-original-imags37h4prxjazz.jpeg?q=70&crop=false",
+      "quantity": {
+        "$numberDouble": "NaN"
+      }
+    }
+  ],
+  "compareMobiles": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65fac23fbe74e9e4a7577129"
+  },
+  "username": "usha",
+  "password": "$2a$05$TymwHjc1LsPxmqh9WdvcW.89RzX59nTb67kc9I1r0SpXwo5MV.tYy",
+  "email": "usha@gmail.com",
+  "phone": {
+    "$numberLong": "8989890009"
+  },
+  "cartItem": [],
+  "compareMobiles": [],
+  "__v": 0
+}]

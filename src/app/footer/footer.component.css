@@ -1,0 +1,12 @@
+.footer{
+    color: black;
+    background-color: red;
+}
+.footer a{
+    color: rgb(21, 32, 34);
+    
+}
+.f{
+    display: flex;
+    gap: 10px;
+}

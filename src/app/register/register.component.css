@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    background-color: white;
+    border-radius: 10%;
+    box-sizing: border-box;
+   
+    justify-content: center;
+    align-items: center;
+    border: solid 2px red;
+    width:max-content;
+    height: max-content;
+
+    
+
+}
+.container:hover{
+    display: flex;
+    background-color: white;
+    border-radius: 10%;
+    box-sizing: border-box;
+    
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(245, 64, 64, 0.925) 0px 15px 25px;
+    width:max-content;
+    height: max-content;
+
+}
+.f{
+    width: 6.5cm;
+    padding: 30px;
+    
+}
+.s{
+    background-color: white;
+    border: solid 2px red;
+}
+.s:hover{
+    background-color: red;
+    color: white;
+   
+}
+.l{
+    color: red;
+}
+.e{
+    color: red;
+    font-weight: bolder;
+}

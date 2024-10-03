@@ -1,0 +1,9 @@
+.s{
+    background-color: white;
+    border: solid 2px coral;
+}
+.s:hover{
+    background-color: coral;
+    color: white;
+   
+}

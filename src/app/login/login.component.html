@@ -1,0 +1,50 @@
+<p class="h1 text-center mt-5 pb-3 a">Login</p>
+@if(userCredErr.userCredErrStatus){
+  <p class="text-center text-danger">Login Error: {{userCredErr.userCredErrMsg}}</p>  
+}
+<div class="container ">
+<form class="form-group f" [formGroup]="user" #ref="ngForm" (ngSubmit)="userLogin()"> 
+  <div class="role">
+  <div class="mb-2 form-check">
+    <input type="radio" formControlName="role" id="user" value="user" class="form-check-input">
+    <label for="user" class="form-check-label">User</label>
+  </div>
+  <div class="mb-2 form-check">
+    <input type="radio" formControlName="role" id="admin" value="admin" class="form-check-input">
+    <label for="admin" class="form-check-label">Admin</label>
+  </div>
+</div>
+    <div class="pb-3">
+        <label for="id" class="form-label ">id<small class="e">*</small></label>
+        <input type="text" formControlName="id" id="id" class="form-control " placeholder="User Id" required>
+        <div *ngIf="
+        id?.invalid &&
+        (id?.dirty || id?.touched || ref.submitted)
+      " class="text-danger">
+            <p *ngIf="id?.errors?.['required']">User Id is required</p>
+            </div>
+           
+        
+    </div>
+    <div class="pb-3">
+        <label for="password" class="form-label">Password<small class="e">*</small></label>
+        <input type="password" formControlName="password" id="password" class="form-control" placeholder="Password" required>
+    </div>
+    <div *ngIf=
+    "password?.invalid &&
+    (password?.dirty || password?.touched || ref.submitted)
+  " class="text-danger">
+  <p *ngIf="password?.errors?.['required']">Password is required</p>
+</div>
+    <div class="text-center pb-3">
+        
+<button type="submit" class="btn s px-5">
+    Login
+</button>
+    </div>
+    <p class="pt-2 ">New User? Go to <a routerLink="/register" routerLinkActive="active" class="l">Register</a></p>
+    <p class="pt-2 ">Forgot Password? <a routerLink="/forgot" routerLinkActive="active" class="l">Reset</a></p>
+</form>
+</div>
+
+  

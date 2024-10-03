@@ -1,0 +1,33 @@
+.n{
+    
+    background-color: red;
+    box-shadow: rgba(226, 205, 180, 0.925) 0px 15px 25px; 
+
+}
+.n:hover{
+    
+    box-shadow: red 0px 15px 25px;   
+    
+}
+
+
+
+.r:hover{
+    border: solid 2px white;
+    border-radius: 11%;
+    
+    
+    
+}
+
+
+ 
+
+.x{
+    display: flex;
+    
+    gap: 20px;
+   
+}
+
+

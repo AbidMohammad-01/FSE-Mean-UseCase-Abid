@@ -1,0 +1,43 @@
+
+    <div class="container mt-5">
+      <h2 class="text-center pb-4">{{id}}'s Tickets</h2>
+      
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h3>Details:</h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Sno</th>
+                <th>Title</th>
+                <th>Theatre</th>
+                <th>No of Seats</th>
+                <th>Seats</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of cartItem;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{ product.title }}</td>
+                <td>{{ product.theatre }}</td>
+                <td>{{ product.seats }}</td>
+                <td>{{ product.seatNum }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+        
+        
+      
+         
+    
+    
+    
+    
+      
+    
+    
+    

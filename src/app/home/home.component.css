@@ -1,0 +1,97 @@
+.function {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    border-radius: 7%;
+}
+
+
+.i:hover {
+    opacity: 40%;
+
+}
+
+.card:hover {
+    box-sizing: border-box;
+
+    box-shadow: rgba(245, 64, 64, 0.925) 0px 5px 15px;
+
+}
+
+.p:hover {
+    opacity: 50%;
+    color: rgba(255, 89, 80, 0.995);
+}
+
+.w {
+    height: 50px;
+    width: 40px;
+    background-color: red;
+    top: 45%;
+    border: solid 2px white;
+
+}
+
+.brands {
+    /* display: flex; */
+    padding: 20px;
+    justify-content: space-around;
+
+}
+
+.c {
+
+    height: 50px;
+    width: auto;
+}
+
+.c1:hover {
+    box-shadow: rgba(15, 15, 14, 0.925) 0px 5px 15px;
+    height: 50px;
+}
+
+.c2:hover {
+    box-shadow: rgba(21, 21, 232, 0.925) 0px 5px 15px;
+    height: 50px;
+}
+
+.c3:hover {
+    box-shadow: rgba(4, 101, 67, 0.925) 0px 5px 15px;
+    height: 50px;
+}
+
+.c4:hover {
+    box-shadow: rgba(245, 161, 64, 0.925) 0px 5px 15px;
+    height: 50px;
+}
+
+.c5:hover {
+    box-shadow: rgba(232, 214, 21, 0.925) 0px 5px 15px;
+    height: 50px;
+}
+
+.b:hover {
+    background-color: red;
+    color: white;
+
+}
+.form-control {
+    border-radius: 30px; /* Trendy pill shape */
+    border: 2px solid #dee2e6; /* Custom border */
+  }
+  
+  .btn-outline-success {
+    border-radius: 30px; /* Matching pill shape for the button */
+  }
+.card-text{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 30px;
+    max-height: 70px;
+}

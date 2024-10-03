@@ -1,0 +1,69 @@
+
+<div class="container ">
+  @if(currentUser){
+  <h1>Welcome, {{currentUser}}</h1>
+  }
+  <div id="carouselExampleIndicators" class="carousel slide pt-3">
+    <div class="carousel-indicators">
+      <button type="button" data-target="#carouselExampleIndicators" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-target="#carouselExampleIndicators" data-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-target="#carouselExampleIndicators" data-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://resize.indiatvnews.com/en/centered/newbucket/1200_675/2024/06/file-image-2024-06-13t171135-1718279030.jpg"class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.marvel.com/content/1x/deadpool-and-wolverine-home-ent-article-card.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://static.toiimg.com/thumb/msid-111390332,imgsize-154982,width-400,resizemode-4/111390332.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev w" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+      
+      <span class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+      </svg></span>
+    </button>
+    <button class="carousel-control-next w" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+      
+      <span class="visually-hidden "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+      </svg></span>
+    </button>
+  </div>
+  
+ 
+
+
+  <h1 class=" text-center pt-3">New Releases</h1>
+  
+  <div class="row">
+    <div class="col-12 justify-content-center ">
+      <div class="input-group mb-3 w-50  mx-auto">
+        <input type="search" class="form-control" placeholder="Search" aria-label="Search" [(ngModel)]="searchedProduct" aria-describedby="button-addon2">
+        <button class="btn btn-outline-dark b" type="submit" id="button-addon2" (click)="searchProduct()">Search</button>
+      </div>
+    </div>
+  </div>
+  </div>
+<div class="row">
+  
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3 pb-3 pt-5" *ngFor="let product of searchData">
+   
+    <div class="card p-100 d-flex flex-column">
+      <img [src]="product.img" class="card-img-top i" alt="Product Image" height="250px" width="50px" >
+      <div class="card-body">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">Theatre : {{ product.theatre }}</p>
+        <p class="card-text">Total : {{product.totaltickets}}</p>
+        <p class="card-text">Available : {{product.availabletickets}}</p>
+        <p class="card-text">Price : ₹ {{product.price}}</p>
+        <button class="btn btn-outline-dark b" (click)="bookTicket(product.title)">Book Tickets</button>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>

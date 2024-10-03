@@ -1,0 +1,97 @@
+
+<h1 class="text-center">Welcome Admin </h1>
+<div class="buttons pb-4">
+    <button class="btn btn-outline-dark s " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Add Movies
+      </button>
+          <button class="btn btn-outline-dark s pl-3" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+            Update Movie Status/Delete
+           </button>
+</div>
+
+<div class="collapse" id="collapseExample">
+    <p class="text-center h1 mt-5 pb-3">Add New Movies</p>
+    <div class="container w-50">
+        <form class="form-group f" [formGroup]="moviedetails" (ngSubmit)="send()">
+            <div>
+                <label for="title" class="form-label">Title</label>
+                <input type="text" formControlName="title" id="Title" class="form-control" placeholder="Title" required>
+            </div>
+            <div>
+                <label for="theatre" class="form-label">Theatre</label>
+                <input type="text" formControlName="theatre" id="theatre" class="form-control" placeholder="theatre" required>
+            </div>
+            <div>
+                <label for="totaltickets" class="form-label">Total Tickets</label>
+                <input type="number" formControlName="totaltickets" id="totaltickets" class="form-control" placeholder="totaltickets" required>
+            </div>
+            <div>
+                <label for="availabletickets" class="form-label">Available Tickets</label>
+                <input type="number" formControlName="availabletickets" id="availabletickets" class="form-control" placeholder="availabletickets" required>
+            </div>
+            <div>
+              <label for="availabletickets" class="form-label">Price</label>
+              <input type="number" formControlName="availabletickets" id="availabletickets" class="form-control" placeholder="availabletickets" required>
+          </div>
+            <div>
+                <label for="img" class="form-label ">image</label>
+                <input type="img" formControlName="img" id="img" class="form-control" placeholder="img" required>
+            </div>
+            <div class="text-center px-5 pt-3">
+                <button type="submit" class="btn s">Add</button>
+            </div>
+        </form>
+        </div>
+</div>
+
+
+
+<div class="tab">
+  <div class="collapse" id="collapseExample2">
+      <table class="table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">title</th>
+              <th scope="col">Movie</th>
+              <th scope="col">Theatre</th>
+              <th scope="col">Available</th>
+              <th scope="col">Total</th>
+              <th scope="col">Price</th>
+              <th scope="col">Status</th>
+              <th scope="col">Update</th>
+              <th scope="col">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of movies;let i=index">
+              <td scope="row">{{product.title}}</td>
+              <th><img [src]="product.img" height="30px" width="30px"></th>
+              <td>{{product.theatre}}</td>
+              <td>{{product.availabletickets}}</td>
+              <td>{{product.totaltickets}}</td>
+              <td>{{product.price}}</td>
+              <td>{{product.status}}</td>
+              <td><button type="submit" class="btn s" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample"  (click)="getTitle(product.title)">UpdateStatus</button></td>
+              <td><button type="button" class="btn s" (click)="deleteMovie(product.title,i)">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+    
+      
+  </div>
+  </div>
+
+  <div class="collapse" id="collapseExample3">
+    <p class="text-center h1 mt-5 pb-3">Enter The Booked Tickets</p>
+    <div class="container w-50">
+        
+            <div>
+                <label for="title" class="form-label">No of tickets</label>
+                <input type="number" [(ngModel)]="bookedTickets" placeholder="Number" required>
+            </div>
+            <div class="text-center px-5 pt-3">
+              <button type="submit" class="btn s" (click)="updateStatus()">Save</button>
+          </div>
+        
+        </div>
+</div>
